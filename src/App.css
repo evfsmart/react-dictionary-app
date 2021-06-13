@@ -1,0 +1,35 @@
+/* Color Palette https://colorhunt.co/palette/290405
+Background: #fff5eb
+Light blue: #deedf0
+Light orange: #f4c7ab
+Khaki: #b2b8a3 */
+
+.App {
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+
+.App .App-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 52px;
+}
+
+.App .App-header {
+  margin: 30px 0;
+}
+
+.App .App-header h1 {
+  color: #b2b8a3;
+  font-weight: 700;
+}
+
+.App .btn {
+  background-color: #f4c7ab;
+  border: #f4c7ab;
+}
+
+.App .btn:hover {
+  background-color: #deedf0;
+  border: #deedf0;
+}
