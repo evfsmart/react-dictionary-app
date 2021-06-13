@@ -1,12 +1,26 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Dictionary.css";
 
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
 
+  function handleResponse(response) {
+    return console.log(response.data[0].meanings);
+  }
+
   function search(event) {
     event.preventDefault();
-    return alert(`Searching for ${keyword}`);
+
+    // documentation: https://dictionaryapi.dev/
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${keyword}`;
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch(function (error) {
+        if (error.response.request.status === 404)
+          alert("Not a valid search term");
+      });
   }
 
   function handleKeywordChange(event) {
