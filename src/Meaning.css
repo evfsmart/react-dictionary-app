@@ -1,0 +1,14 @@
+.Meaning h3 {
+  color: #f0a97d;
+}
+
+.Meaning p {
+  color: #777777;
+}
+
+.Meaning .Definition {
+  color: #f0a97d;
+  padding-left: 12px;
+  margin-top: -16px;
+  font-style: italic;
+}

@@ -11,7 +11,8 @@ Teal: #069 */
 }
 
 .Header h1 {
-  color: #aaa;
+  color: #777777;
+  font-size: 52px;
   font-weight: 700;
   text-align: center;
 }
