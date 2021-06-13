@@ -1,14 +1,16 @@
 /*
 Background: #fff5eb
+Grey: #AAA
+Khaki: #b2b8a3
 Light blue: #deedf0
 Light orange: #f4c7ab
-Khaki: #b2b8a3 */
+Teal: #069 */
 
 .Footer {
-  color: #b2b8a3;
+  color: #aaa;
   font-size: 10px;
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .Footer a {

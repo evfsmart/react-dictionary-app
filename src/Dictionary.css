@@ -1,0 +1,26 @@
+/*
+Background: #fff5eb
+Grey: #AAA
+Khaki: #b2b8a3
+Light blue: #deedf0
+Light orange: #f4c7ab
+Teal: #069 */
+
+.Dictionary .btn {
+  background-color: #f4c7ab;
+  border: #f4c7ab;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.Dictionary .btn:hover {
+  background-color: #deedf0;
+  border: #deedf0;
+}
+
+.Dictionary .SearchField {
+  border: #f4c7ab;
+  border-radius: 4px;
+  padding: 10px;
+  line-height: 1.5;
+}

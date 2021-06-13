@@ -6,9 +6,11 @@ Light blue: #deedf0
 Light orange: #f4c7ab
 Teal: #069 */
 
-.App {
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 800px;
+.Header {
+  margin: 30px 0;
+}
+
+.Header h1 {
+  color: #aaa;
+  font-weight: 700;
 }
