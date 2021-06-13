@@ -21,6 +21,7 @@ Teal: #069 */
 .Dictionary .SearchField {
   border: #f4c7ab;
   border-radius: 4px;
+  margin-bottom: 24px;
   padding: 10px;
   line-height: 1.5;
 }
