@@ -1,0 +1,17 @@
+/*
+Background: #fff5eb
+Light blue: #deedf0
+Light orange: #f4c7ab
+Khaki: #b2b8a3 */
+
+.Footer {
+  color: #b2b8a3;
+  font-size: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Footer a {
+  color: #069;
+  text-decoration: none;
+}
