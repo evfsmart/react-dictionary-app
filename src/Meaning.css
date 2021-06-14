@@ -1,16 +1,11 @@
 .Meaning h3 {
   color: #f0a97d;
+  margin-bottom: -8px;
   margin-top: 24px;
 }
 
 .Meaning p {
   color: #777777;
-}
-
-.Meaning .Definition {
-  color: #f0a97d;
-  padding-left: 12px;
-  margin-top: -16px;
   margin-bottom: 0;
-  font-style: italic;
+  margin-top: 20px;
 }
