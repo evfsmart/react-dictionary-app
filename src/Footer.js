@@ -20,6 +20,10 @@ export default function Footer() {
       >
         Netlify
       </a>
+      . Favicon by{" "}
+      <a href="https://www.flaticon.com/authors/srip" title="srip">
+        Flaticon
+      </a>
       .
     </div>
   );
