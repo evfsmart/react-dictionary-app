@@ -7,6 +7,11 @@ Light orange: #f4c7ab
 Dark orange: #f0a97d
 Teal: #069 */
 
+body {
+  background-color: #deedf0;
+  margin: 0;
+}
+
 .App {
   font-family: "PT Sans", sans-serif;
   margin: 0 auto;
