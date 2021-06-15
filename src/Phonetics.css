@@ -1,0 +1,30 @@
+.Phonetics {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+.Phonetics a {
+  color: #777777;
+}
+
+.Phonetics .PhoneticsText {
+  color: #777777;
+  padding-left: 4px;
+}
+
+.Phonetics .fas {
+  color: #f0a97d;
+}
+
+.Phonetics .fas:hover {
+  color: #069;
+}
+
+/*
+Background: #fff5eb
+Grey: #777777
+Khaki: #b2b8a3
+Light blue: #deedf0
+Light orange: #f4c7ab
+Dark orange: #f0a97d
+Teal: #069 */
