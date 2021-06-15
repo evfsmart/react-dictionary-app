@@ -1,8 +1,10 @@
 .Meaning h3 {
   color: #f0a97d;
+  font-size: 28px;
 }
 
 .Meaning p {
   color: #777777;
+  font-size: 18px;
   margin: 12px 0 0 0;
 }

@@ -8,7 +8,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Header />
-        <Dictionary defaultKeyword="definition" />
+        <Dictionary defaultKeyword="flower" />
         <Footer />
       </div>
     </div>

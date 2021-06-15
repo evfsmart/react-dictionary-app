@@ -47,7 +47,7 @@ export default function Dictionary(props) {
               <input
                 className="SearchField form-control shadow-sm"
                 type="search"
-                placeholder="Search for a word"
+                defaultValue="Search for a word, e.g. 'flower'"
                 onChange={handleKeywordChange}
               />
             </div>
@@ -58,7 +58,7 @@ export default function Dictionary(props) {
             </div>
           </div>
         </form>
-
+        <hr />
         <Results results={results} />
       </div>
     );
