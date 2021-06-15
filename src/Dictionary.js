@@ -3,17 +3,16 @@ import Results from "./Results";
 import axios from "axios";
 import "./Dictionary.css";
 
-export default function Dictionary() {
-  const [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
     setResults(response.data[0]);
   }
 
-  function search(event) {
-    event.preventDefault();
-
+  function search() {
     // documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${keyword}`;
     axios
@@ -25,31 +24,46 @@ export default function Dictionary() {
       });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      <form onSubmit={search}>
-        <div className="row ">
-          <div className="col-9">
-            <input
-              className="SearchField form-control shadow-sm"
-              type="search"
-              placeholder="Search for a word"
-              onChange={handleKeywordChange}
-            />
-          </div>
-          <div className="col">
-            <button className="btn btn-primary shadow-sm form-control">
-              Search
-            </button>
-          </div>
-        </div>
-      </form>
+  function load() {
+    setLoaded(true);
+    search();
+  }
 
-      <Results results={results} />
-    </div>
-  );
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <form onSubmit={handleSubmit}>
+          <div className="row ">
+            <div className="col-9">
+              <input
+                className="SearchField form-control shadow-sm"
+                type="search"
+                placeholder="Search for a word"
+                onChange={handleKeywordChange}
+              />
+            </div>
+            <div className="col">
+              <button className="btn btn-primary shadow-sm form-control">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <Results results={results} />
+      </div>
+    );
+  } else {
+    load();
+    return "Loading...";
+  }
 }
