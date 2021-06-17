@@ -24,6 +24,7 @@ export default function Results(props) {
             </section>
           );
         })}
+        {/* {props.results etc. */}
       </div>
     );
   } else {

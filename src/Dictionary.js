@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Results from "./Results";
+import Photos from "./Photos";
 import axios from "axios";
 import "./Dictionary.css";
 
@@ -7,9 +8,14 @@ export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState(null);
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setResults(response.data[0]);
+  }
+
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
   }
 
   function search() {
@@ -17,11 +23,17 @@ export default function Dictionary(props) {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_GB/${keyword}`;
     axios
       .get(apiUrl)
-      .then(handleResponse)
+      .then(handleDictionaryResponse)
       .catch(function (error) {
         if (error.response.request.status === 404)
           alert("Not a valid search term");
       });
+
+    let pexelsApiKey =
+      "563492ad6f91700001000001747399df9c0b4ffbaec10832f38d8cc0";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   function handleSubmit(event) {
@@ -41,25 +53,32 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <form onSubmit={handleSubmit}>
-          <div className="row ">
-            <div className="col-9">
-              <input
-                className="SearchField form-control shadow-sm"
-                type="search"
-                defaultValue="Search for a word, e.g. 'flower'"
-                onChange={handleKeywordChange}
-              />
+        <section>
+          <h2>What word do you want to look up?</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="row ">
+              <div className="col-9">
+                <input
+                  className="SearchField form-control shadow-sm"
+                  type="search"
+                  defaultValue={props.defaultKeyword}
+                  onChange={handleKeywordChange}
+                />
+              </div>
+              <div className="col">
+                <button className="btn btn-primary shadow-sm form-control">
+                  Search
+                </button>
+              </div>
             </div>
-            <div className="col">
-              <button className="btn btn-primary shadow-sm form-control">
-                Search
-              </button>
-            </div>
+          </form>
+          <div className="Hint">
+            suggested words: dog, wine, rainbow, plant...
           </div>
-        </form>
+        </section>
         <hr />
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {

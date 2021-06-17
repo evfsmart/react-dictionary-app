@@ -6,10 +6,23 @@ Light blue: #deedf0
 Light orange: #f4c7ab
 Teal: #069 */
 
+.Dictionary section {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+}
+
 .Dictionary hr {
   color: #069;
   opacity: 10%;
   margin: 30px 0;
+}
+
+.Dictionary h2 {
+  color: #f4c7ab;
+  font-size: 30px;
 }
 
 .Dictionary .btn {
@@ -25,6 +38,11 @@ Teal: #069 */
   border: #aaa;
 }
 
+.Dictionary .Hint {
+  color: #069;
+  margin-top: 4px;
+}
+
 .Dictionary .SearchField {
   border: #f4c7ab;
   border-radius: 4px;
@@ -32,4 +50,10 @@ Teal: #069 */
   font-size: 20px;
   padding: 10px 10px 10px 18px;
   line-height: 1.5;
+}
+
+@media (max-width: 470px) {
+  .Dictionary .btn {
+    margin-top: 8px;
+  }
 }
