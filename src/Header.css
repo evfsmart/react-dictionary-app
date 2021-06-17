@@ -1,19 +1,10 @@
-/*
-Background: #fff5eb
-Grey: #AAA
-Khaki: #b2b8a3
-Light blue: #deedf0
-Light orange: #f4c7ab
-Teal: #069 */
-
 .Header {
   margin: 50px 0;
 }
 
 .Header h1 {
-  color: #fff;
+  color: #314085;
   font-size: 52px;
   font-weight: 700;
   text-align: center;
-  text-shadow: 1px 1px 2px #069;
 }

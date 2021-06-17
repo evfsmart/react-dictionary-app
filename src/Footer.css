@@ -9,11 +9,12 @@ Teal: #069 */
 .Footer {
   color: #777777;
   font-size: 10px;
+  margin-bottom: 16px;
   margin-top: -8px;
   text-align: left;
 }
 
 .Footer a {
-  color: #069;
+  color: #6a8ab1;
   text-decoration: none;
 }
