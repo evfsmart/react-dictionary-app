@@ -56,21 +56,12 @@ export default function Dictionary(props) {
         <section>
           <h2>What word do you want to look up?</h2>
           <form onSubmit={handleSubmit}>
-            <div className="row ">
-              <div className="col-9">
-                <input
-                  className="SearchField form-control shadow-sm"
-                  type="search"
-                  defaultValue={props.defaultKeyword}
-                  onChange={handleKeywordChange}
-                />
-              </div>
-              <div className="col">
-                <button className="btn btn-primary shadow-sm form-control">
-                  Search
-                </button>
-              </div>
-            </div>
+            <input
+              className="SearchField form-control shadow-sm"
+              type="search"
+              defaultValue={props.defaultKeyword}
+              onChange={handleKeywordChange}
+            />
           </form>
           <div className="Hint">
             suggested words: dog, wine, rainbow, plant...
